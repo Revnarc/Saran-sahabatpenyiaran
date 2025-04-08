@@ -241,5 +241,14 @@
         console.error("Gagal memuat header:", err);
       });
     </script>
+    <script>
+        console.log("Hamburger:", hamburger);
+console.log("Mobile Menu:", mobileMenu);
+hamburger.addEventListener("click", () => {
+  console.log("Hamburger diklik!");
+  mobileMenu.classList.toggle("hidden");
+});
+
+    </script>
 </body>
 </html>
