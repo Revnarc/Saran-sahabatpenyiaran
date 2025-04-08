@@ -179,17 +179,21 @@
     <script>
     fetch("header.html")
       .then(res => res.text())
-      .then(data => {
-        document.getElementById("header-container").innerHTML = data;
+      .then(html => {
+        document.getElementById("header-container").innerHTML = html;
     
-        const toggle = document.getElementById("hamburger-icon");
-        const menu = document.getElementById("nav-menu");
+        // Setelah HTML dimasukkan, jalankan toggle hamburger
+        const hamburger = document.getElementById("hamburger-icon");
+        const mobileMenu = document.getElementById("mobile-menu");
     
-        if (toggle && menu) {
-          toggle.addEventListener("click", () => {
-            menu.classList.toggle("hidden");
+        if (hamburger && mobileMenu) {
+          hamburger.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
           });
         }
+      })
+      .catch(err => {
+        console.error("Gagal memuat header:", err);
       });
     </script>
     <script>
