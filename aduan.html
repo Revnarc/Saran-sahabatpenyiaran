@@ -222,20 +222,23 @@
         </div>
     </footer>
     <script>
-    fetch('header.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('header').innerHTML = data;
+    fetch("header.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("header-container").innerHTML = html;
     
-        // Setelah header dimuat, barulah pasang event listener
-        const hamburger = document.getElementById('hamburger');
-        const navMenu = document.getElementById('nav-menu');
+        // Setelah HTML dimasukkan, jalankan toggle hamburger
+        const hamburger = document.getElementById("hamburger-icon");
+        const mobileMenu = document.getElementById("mobile-menu");
     
-        if (hamburger && navMenu) {
-          hamburger.addEventListener('click', function () {
-            navMenu.classList.toggle('hidden');
+        if (hamburger && mobileMenu) {
+          hamburger.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
           });
         }
+      })
+      .catch(err => {
+        console.error("Gagal memuat header:", err);
       });
     </script>
 </body>
