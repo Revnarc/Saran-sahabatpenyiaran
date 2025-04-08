@@ -23,12 +23,12 @@ Versi ini merupakan hasil redesain untuk meningkatkan tampilan, kenyamanan, dan 
 - `aduan.html` – Form pelaporan siaran
 - `profil.html` – Profil singkat KPI
 - `lacakaduan.html` – Melacak status aduan
+- `header.html` – Komponen header terpisah
 - `hero.png`, `kpi.png` – Asset visual
 
 ## 🚧 Status Pengembangan
 
 - ✅ Tampilan desktop telah selesai
-- 🔄 Tampilan mobile masih dalam pengembangan
 - 🧪 Masih dalam tahap eksplorasi & belajar
 
 ## 🌐 Demo
