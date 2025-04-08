@@ -30,15 +30,24 @@
             <div class="flex justify-between items-center py-4">
                 <!-- Logo and Name (left) -->
                 <div class="flex items-center">
-                    <img src="kpi.png" alt="Logo KPI" class="h-10 md:h-12">
-                    <div class="ml-2 md:ml-4">
-                        <h1 class="text-lg md:text-xl font-bold text-gray-800">SARAN</h1>
-                        <p class="text-xs md:text-sm font-bold text-gray-600">Sahabat Penyiaran</p>
+                    <img src="kpi.png" alt="Logo KPI" class="h-12">
+                    <div class="ml-4">
+                        <h1 class="text-xl font-bold text-gray-800">SARAN</h1>
+                        <p class="text-sm font-bold text-gray-600">Sahabat Penyiaran</p>
                     </div>
                 </div>
     
-                <!-- Navigation and Buttons (right) -->
-                <div class="hidden lg:flex items-center space-x-4">
+                <!-- Navigation Menu (centered) -->
+                <div class="hidden lg:flex justify-center flex-grow space-x-8">
+                    <a href="index.html" class="nav-link px-4 py-4 font-bold text-gray-700 hover:text-yellow-600 border-b-2 border-transparent hover:border-yellow-600">BERANDA</a>
+                    <a href="profil.html" class="nav-link px-4 py-4 font-bold text-gray-700 hover:text-yellow-600 border-b-2 border-transparent hover:border-yellow-600">PROFIL</a>
+                    <a href="#data" class="nav-link px-4 py-4 font-bold text-gray-700 hover:text-yellow-600 border-b-2 border-transparent hover:border-yellow-600">DATA</a>
+                    <a href="#berita" class="nav-link px-4 py-4 font-bold text-gray-700 hover:text-yellow-600 border-b-2 border-transparent hover:border-yellow-600">BERITA</a>
+                    <a href="#kontak" class="nav-link px-4 py-4 font-bold text-gray-700 hover:text-yellow-600 border-b-2 border-transparent hover:border-yellow-600">KONTAK</a>
+                </div>
+    
+                <!-- Login, Register buttons, and Hamburger Menu (right) -->
+                <div class="flex items-center space-x-4">
                     <button class="px-4 py-2 font-bold text-yellow-600 hover:bg-yellow-50 rounded-lg">Masuk</button>
                     <button class="px-4 py-2 font-bold bg-yellow-600 text-white rounded-lg hover:bg-yellow-700">Daftar</button>
                 </div>
@@ -393,30 +402,8 @@
                     </ul>
                 </div>
 
-                <!-- Download & Social Media Section -->
+                <!-- Social Media Section -->
                 <div>
-                    <h4 class="font-bold mb-4">Download Aplikasi</h4>
-                    <div class="flex flex-col space-y-3 mb-8">
-                        <a href="#" class="inline-flex items-center px-4 py-2 bg-black rounded-lg hover:bg-gray-900">
-                            <svg class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.08-.46-2.07-.48-3.2 0-1.42.63-2.17.53-3.08-.35-4.98-5.08-4.13-12.37 1.74-12.47 1.4.06 2.4.93 3.2.93.76 0 2.19-.92 3.68-.78.63.03 2.38.25 3.5 1.89-9.13 3.84-7.72 13.84 1.16 10.43-.87 1.11-1.97 2.14-2.92 3.08zM12.92 5.21c-.16-2.23 1.82-4.07 4.07-4.21.18 2.18-1.71 4.1-4.07 4.21z"/>
-                            </svg>
-                            <div>
-                                <div class="text-xs">Download on the</div>
-                                <div class="text-xl font-semibold font-sans -mt-1">App Store</div>
-                            </div>
-                        </a>
-                        <a href="#" class="inline-flex items-center px-4 py-2 bg-black rounded-lg hover:bg-gray-900">
-                            <svg class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M3 20.97V3.03c0-.48.38-.82.85-.76l12.03 2.4c.49.1.85.54.85 1.04v12.58c0 .5-.36.94-.85 1.04L3.85 21.73c-.47.06-.85-.28-.85-.76zm16.88-11.2l3.84-3.84c.38-.38.38-1 0-1.38-.38-.38-1-.38-1.38 0l-3.84 3.84-3.84-3.84c-.38-.38-1-.38-1.38 0-.38.38-.38 1 0 1.38l3.84 3.84-3.84 3.84c-.38.38-.38 1 0 1.38.38.38 1 .38 1.38 0l3.84-3.84 3.84 3.84c.38.38 1 .38 1.38 0 .38-.38.38-1 0-1.38l-3.84-3.84z"/>
-                            </svg>
-                            <div>
-                                <div class="text-xs">GET IT ON</div>
-                                <div class="text-xl font-semibold font-sans -mt-1">Google Play</div>
-                            </div>
-                        </a>
-                    </div>
-
                     <h4 class="font-bold mb-4">Ikuti Kami</h4>
                     <div class="flex space-x-4">
                         <a href="#" class="text-white hover:text-white">
@@ -430,12 +417,12 @@
             </div>
         </div>
     </footer>
+
     <script>
-        const hamburgerIcon = document.getElementById("hamburger-icon");
-        const mobileMenu = document.getElementById("mobile-menu");
-    
-        hamburgerIcon.addEventListener("click", () => {
-            mobileMenu.classList.toggle("hidden");
+        // Toggle mobile menu
+        document.getElementById("hamburger-icon").addEventListener("click", function() {
+            const menu = document.getElementById("mobile-menu");
+            menu.classList.toggle("hidden");
         });
     </script>
     <script>
